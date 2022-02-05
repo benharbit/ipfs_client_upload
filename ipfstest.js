@@ -10,7 +10,6 @@ const IMAGES_FOLDER = './images'
 const CAR_NAME = 'images5.car'
 
 
-
 async function createCar(){
   let writable = fs.createWriteStream(`${IMAGES_CAR_FOLDER}/${CAR_NAME}`)
   await packToStream.packToStream({
@@ -20,13 +19,11 @@ async function createCar(){
   });
 }
 
-
 async function getAll(ipfs){
   for await (const file of ipfs.dag.import(ipfsClient.globSource(`${IMAGES_CAR_FOLDER}`, '*'))) {
     console.log(file)
   }
 }
-
 
 async function run() {
   ipfs = ipfsClient.create(process.argv[2])
