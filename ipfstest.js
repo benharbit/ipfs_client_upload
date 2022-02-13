@@ -7,33 +7,6 @@ const FsBlockStore = require('ipfs-car/blockstore/fs')
 const unpack  = require('ipfs-car/unpack')
 const  CarReader = require('@ipld/car')
 
-
-
-/*
-async function copyImagesTo1155Format(){
-  fs.readdir(IMAGES_FOLDER, function (err, files) {
-      //handling error
-      if (err) {
-          return console.log('Unable to scan directory: ' + err);
-      } 
-      //listing all files using forEach
-      let counter = 0;
-      let fileName;
-      files.forEach(function (file) {
-          let paddedHex = ("0000000000000000000000000000000000000000000000000000000000000000" + counter.toString(16)).substr("-64");
-        console.log("from: " + ${IMAGES_FOLDER}${file} + " to: " + `${IMAGES_FOLDER_1155}${paddedHex}.jpg`)
-        await fs.copyFile(`${IMAGES_FOLDER}${file}`, `${IMAGES_FOLDER_1155}${paddedHex}.jpg`, (err) =>{
-
-        } )
-          console.log(file); 
-      });
-});
-
-}
-*/
-
-
-
 async function  createMetaData(imagesIFPSAddress, imageFolder, metaDataFolder){
   let i = 1;
 
